@@ -27,7 +27,7 @@ question = data[i]
 
 @app.route("/data_json", methods = ["GET", "POST"])
 def get_data():
-    return jsonify(data[i], i)
+    return jsonify(data[0])
 
 @app.route("/select", methods = ["GET", "POST"])
 def select():
