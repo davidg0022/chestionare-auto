@@ -18,13 +18,13 @@ def get_data():
     shuffle(data)
     return data
 
-data = get_data()
+data = get_data()[0]
 port = int(os.environ.get('PORT', 5000))
 app = Flask(__name__)
 
 i = 0
 
-question = copy(data[i])
+question = copy(data)
 
 @app.route("/data_json", methods = ["GET", "POST"])
 def get_data():
