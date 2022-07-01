@@ -1,0 +1,210 @@
+* {
+  margin: 0;
+  padding: 0;
+  background-color: #f0f2fa;
+  color: rgb(69, 78, 104);
+  font-family: "Fira Sans", sans-serif;
+}
+html {
+  max-width: 100vw;
+  height: 100%;
+  overflow-x: hidden;
+}
+.main {
+  width: 100vw;
+  overflow-x: hidden;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.question_text {
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: 500;
+  font-size: 30px;
+}
+.text_wrapper {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+}
+.answer {
+  /* max-height: 80%; */
+  display: flex;
+  align-items: center;
+  background-color: transparent !important;
+  font-weight: 400;
+  font-size: 18px;
+  padding-right: 24px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  /* border-collapse: separate;
+  border-spacing: 15px; */
+}
+.selected-True {
+  background-color: rgb(254, 227, 140);
+  box-shadow: inset 0px 7px 7px 0px rgb(198 152 9 / 37%) !important;
+}
+.selectedL-True {
+  background-color: rgb(249, 203, 60) !important;
+  box-shadow: inset 0px 7px 7px 0px rgb(198 152 9 / 37%) !important;
+}
+
+#incorect,
+#corect {
+  display: none;
+}
+.main_div {
+  margin-bottom: 135px;
+  margin-top: 100px;
+  display: flex;
+  max-width: 75%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ans_wrapper {
+  cursor: pointer;
+  border-radius: 5px;
+  border: 1px solid rgb(199, 201, 215);
+  /* width: 100%; */
+  margin: 20px;
+  display: flex;
+  align-items: stretch;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 4px 0px;
+}
+.ans_wrapper:hover {
+  box-shadow: none;
+}
+.letter {
+  background-color: rgb(221, 224, 232);
+  text-align: center;
+  margin-right: 24px;
+  font-size: 36px;
+  font-weight: 600;
+  font-stretch: 100%;
+  display: flex;
+  padding: 30px;
+  justify-content: center;
+  align-items: center;
+}
+/* .question_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 75%;
+} */
+.question_wrapper {
+  width: 90%;
+}
+.btn-wrapper {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  background-color: white;
+  justify-content: center;
+  border-top: 2px solid #d6dae4;
+}
+.btn-wrapper .btn-w {
+  border-radius: 5px;
+  background-color: white;
+  display: flex;
+  cursor: pointer;
+  padding: 25px 40px;
+  margin: 25px;
+  background-color: #d6dae4;
+}
+.btn-wrapper div img {
+  margin-right: 4px;
+  width: 21px;
+  background-color: inherit;
+}
+.btn-wrapper .btn-w span {
+  display: flex;
+  justify-content: center;
+  background-color: inherit;
+  text-align: center;
+  align-items: center;
+  font-size: 17px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+.low_opac {
+  opacity: 0.7;
+  cursor: default !important;
+}
+#incorect,
+#corect {
+  font-size: 20px;
+  padding: 20px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+#incorect {
+  background-color: rgb(253, 200, 200);
+  border: 1px solid rgb(250, 150, 150);
+  border-radius: 5px;
+  color: rgb(217, 58, 58);
+}
+#corect {
+  background-color: rgb(203, 253, 200);
+  border: 1px solid rgb(154, 243, 119);
+  border-radius: 5px;
+  color: rgb(73, 217, 29);
+}
+.body_wrapper {
+  height: 100%;
+  display: flex;
+}
+.body_wrapper .img_wrapper_top,
+.body_wrapper .img_wrapper_bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.body_wrapper .img_wrapper_top {
+  display: none;
+}
+.body_wrapper img {
+  box-shadow: rgba(69, 78, 104, 0.8) 0px 14px 13px -9px;
+  width: 90%;
+  height: auto;
+}
+@media only screen and (max-width: 700px) {
+  .main_div {
+    margin-top: 25px;
+    max-width: 90%;
+  }
+  .question_text {
+    margin-bottom: 5px;
+    font-size: 24px;
+  }
+  .body_wrapper {
+    display: block;
+  }
+  .question_wrapper {
+    width: 100%;
+  }
+  .body_wrapper .img_wrapper_bottom {
+    display: none;
+  }
+  .body_wrapper .img_wrapper_top {
+    margin-top: 10px;
+    display: flex;
+  }
+  .btn-wrapper .btn-w span {
+    font-size: 14px;
+  }
+  .btn-wrapper .btn-w {
+    padding: 15px 20px;
+    margin: 15px;
+  }
+}
