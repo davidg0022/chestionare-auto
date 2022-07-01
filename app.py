@@ -67,6 +67,9 @@ data = [
     "img_url": ""
   }]
 question = data[0]
+json_string = json.dumps(question,ensure_ascii=False)
+with open('current.json', 'w', encoding="utf-8") as outfile:
+    outfile.write(json_string)
 i = 0
 
     
@@ -74,17 +77,20 @@ app = Flask(__name__)
 
 @app.route("/data_json", methods = ["GET", "POST"])
 def get_data():
-    global question
-    return question
+    with open("current.json",encoding='utf-8') as json_file:
+        return json.load(json_file)
 
 @app.route("/select", methods = ["GET", "POST"])
 def select():
-    global question
+    with open("current.json",encoding='utf-8') as json_file:
+        question = json.load(json_file)
     if question["disabled"] == True:
         return redirect("/")
     id = request.get_json()["id"]
     question["answers"][id]["selected"] = not question["answers"][id]["selected"]
-    print(question["answers"])
+    json_string = json.dumps(question,ensure_ascii=False)
+    with open('current.json', 'w', encoding="utf-8") as outfile:
+        outfile.write(json_string)
     return redirect("/")
 
 @app.route("/next", methods = ["POST"])
@@ -121,7 +127,8 @@ def check_ans():
 
 @app.route("/", methods = ["GET", "POST"])
 def index():
-    global question
+    with open("current.json",encoding='utf-8') as json_file:
+        question = json.load(json_file)
     return render_template("index.html", question = question)
 
 
