@@ -97,14 +97,17 @@
         });
       }
       setInterval(() => {
+
         fetch("/data_json")
           .then((r) => r.json())
           .then((r) => {
             data = {{ question | tojson }}
-            if (data.title != r.title)
-              location.reload()
-            if (r.incorect)
+            // if (data.title != r.title)
+            //   location.reload()
+            if (r.incorect){
               document.getElementById("incorect").style.display = "block";
+              console.log("test")
+            }
             if (r.corect)
               document.getElementById("corect").style.display = "block";
             if (r.img_url == "")
