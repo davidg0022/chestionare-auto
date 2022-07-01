@@ -74,6 +74,7 @@ app = Flask(__name__)
 
 @app.route("/data_json", methods = ["GET", "POST"])
 def get_data():
+    global question
     return question
 
 @app.route("/select", methods = ["GET", "POST"])
@@ -119,7 +120,7 @@ def check_ans():
 
 @app.route("/", methods = ["GET", "POST"])
 def index():
-    # global questions, i, error
+    global question
     return render_template("index.html", question = question)
 
 
