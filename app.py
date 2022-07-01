@@ -20,9 +20,9 @@ def get_data():
             data.append(q)
     # shuffle(data)
     return data
-
-data = get_data()
-question = data[0]
+if __name__ == '__main__':
+    data = get_data()
+    question = data[0]
 i = 0
 
     
