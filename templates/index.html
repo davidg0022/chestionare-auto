@@ -102,9 +102,8 @@
           .then((r) => r.json())
           .then((r) => {
             data = {{ question | tojson }}
-            // if (data.title != r.title)
-            //   location.reload()
-            console.log(r)
+            if (data.title != r.title)
+              location.reload()
             if (r.incorect){
               document.getElementById("incorect").style.display = "block";
               console.log("test")
@@ -151,7 +150,7 @@
             else
                document.getElementById("next").classList.add("low_opac")
           });
-      }, 450);
+      }, 250);
 
       document.getElementById("send").addEventListener("click", () => {
         ANS = document.getElementsByClassName("answer");
