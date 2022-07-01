@@ -75,4 +75,6 @@ def index():
     # global questions, i, error
     return render_template("index.html", question = question)
 
-app.run(host='0.0.0.0', port=port, debug=True)
+
+if __name__ == "__main__":
+    app.run(host='0.0.0.0', port=port, debug=True)
