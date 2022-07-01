@@ -101,8 +101,8 @@
           .then((r) => r.json())
           .then((r) => {
             data = {{ question | tojson }}
-            if (data.title != r.title)
-              location.reload()
+            // if (data.title != r.title)
+            //   location.reload()
             if (r.incorect)
               document.getElementById("incorect").style.display = "block";
             if (r.corect)
