@@ -30,7 +30,7 @@ app = Flask(__name__)
 
 @app.route("/data_json", methods = ["GET", "POST"])
 def get_data():
-    return jsonify(question)
+    return question
 
 @app.route("/select", methods = ["GET", "POST"])
 def select():
