@@ -2,6 +2,7 @@ from flask import Flask, jsonify, redirect, render_template, request
 from random import choice, shuffle, randint
 import json
 import os
+from copy import copy
 # with open('semnale_luminoase.json',encoding='utf-8') as json_file:
 #     data = json.load(json_file)
 
@@ -23,11 +24,11 @@ app = Flask(__name__)
 
 i = 0
 
-question = data[i]
+question = copy(data[i])
 
 @app.route("/data_json", methods = ["GET", "POST"])
 def get_data():
-    return jsonify(data[0])
+    return jsonify(question)
 
 @app.route("/select", methods = ["GET", "POST"])
 def select():
