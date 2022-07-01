@@ -1,5 +1,5 @@
 from flask import Flask, jsonify, redirect, render_template, request
-from random import choice, shuffle
+from random import choice, shuffle, randint
 import json
 import os
 # with open('semnale_luminoase.json',encoding='utf-8') as json_file:
@@ -76,5 +76,10 @@ def index():
     return render_template("index.html", question = question)
 
 
-if __name__ == "__main__":
-    app.run(debug=True)
+if __name__ == '__main__':
+
+    port = 5000 + randint(0, 999)
+    print(port)
+    url = "http://127.0.0.1:{0}".format(port)
+    print(url)
+    app.run(use_reloader=False, debug=True, port=port)
