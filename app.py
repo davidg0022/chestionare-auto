@@ -18,7 +18,7 @@ def get_data():
             temp = json.load(json_file)
             for q in temp:
                 data.append(q)
-    shuffle(data)
+    # shuffle(data)
     return data
 
 data = get_data()[0]
