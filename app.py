@@ -7,6 +7,9 @@ from copy import copy
 #     data = json.load(json_file)
 
 
+
+port = int(os.environ.get('PORT', 5000))
+app = Flask(__name__)
 def get_data():
     files = [f for f in os.listdir('.') if os.path.isfile(f) and ".json" in f]
     data = []
@@ -19,9 +22,6 @@ def get_data():
     return data
 
 data = get_data()[0]
-port = int(os.environ.get('PORT', 5000))
-app = Flask(__name__)
-
 i = 0
 
 question = copy(data)
