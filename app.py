@@ -18,7 +18,7 @@ def get_data():
     return data
 
 data = get_data()
-
+port = int(os.environ.get('PORT', 5000))
 app = Flask(__name__)
 
 i = 0
@@ -74,3 +74,5 @@ def check_ans():
 def index():
     # global questions, i, error
     return render_template("index.html", question = question)
+
+app.run(host='0.0.0.0', port=port, debug=True)
