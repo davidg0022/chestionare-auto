@@ -20,9 +20,53 @@ def get_data():
             data.append(q)
     # shuffle(data)
     return data
-if __name__ == '__main__':
-    data = get_data()
-    question = data[0]
+
+data = [
+  {
+    "corect": False,
+    "incorect": False,
+    "disabled": False,
+    "title": "În cazul unui accident în care victima şi-a pierdut cunoştinţa, prima măsură va fi:",
+    "answers": [
+      {
+        "text": "să administraţi medicamente din trusa de prim ajutor;",
+        "correct": "0",
+        "selected": False
+      },
+      {
+        "text": "să imobilizaţi eventualele fracturi;",
+        "correct": "0",
+        "selected": False
+      },
+      {
+        "text": "să controlaţi respiraţia şi bătăile inimii.",
+        "correct": "1",
+        "selected": False
+      }
+    ],
+    "img_url": ""
+  },
+  {
+    "corect": False,
+    "incorect": False,
+    "disabled": False,
+    "title": "Hemoragia nazală se poate opri dacă accidentatul:",
+    "answers": [
+      {
+        "text": "stă culcat cu capul pe spate;",
+        "correct": "0",
+        "selected": False
+      },
+      {
+        "text": "stă în picioare şi îşi strânge ambele nări timp de aproximativ 5-10 minute;",
+        "correct": "1",
+        "selected": False
+      },
+      {"text": "ridică mâna dreaptă.", "correct": "0", "selected": False}
+    ],
+    "img_url": ""
+  }]
+question = data[0]
 i = 0
 
     
