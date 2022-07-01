@@ -79,6 +79,7 @@ def get_data():
 
 @app.route("/select", methods = ["GET", "POST"])
 def select():
+    global question
     if question["disabled"] == True:
         return redirect("/")
     id = request.get_json()["id"]
