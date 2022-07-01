@@ -9,22 +9,24 @@ from copy import copy
 
 
 port = int(os.environ.get('PORT', 5000))
-app = Flask(__name__)
+
 def get_data():
     files = [f for f in os.listdir('.') if os.path.isfile(f) and ".json" in f]
     data = []
-    for f in files:
-        with open(f,encoding='utf-8') as json_file:
-            temp = json.load(json_file)
-            for q in temp:
-                data.append(q)
+    # for f in files:
+    with open(files[0],encoding='utf-8') as json_file:
+        temp = json.load(json_file)
+        for q in temp:
+            data.append(q)
     # shuffle(data)
     return data
 
-data = get_data()[0]
+data = get_data()
+question = data[0]
 i = 0
 
-question = copy(data)
+    
+app = Flask(__name__)
 
 @app.route("/data_json", methods = ["GET", "POST"])
 def get_data():
@@ -78,9 +80,10 @@ def index():
 
 
 if __name__ == '__main__':
-
+    
     port = 5000 + randint(0, 999)
     print(port)
     url = "http://127.0.0.1:{0}".format(port)
     print(url)
+
     app.run()
