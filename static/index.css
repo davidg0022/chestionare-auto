@@ -1,0 +1,73 @@
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.title {
+  font-size: 34px;
+  margin-bottom: 25px;
+}
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-btn {
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  color: white;
+  min-width: 160px;
+  background-color: rgb(65, 118, 242);
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 50px;
+  border: 0;
+}
+.pop-up {
+  background-color: rgba(106, 106, 106, 0.5);
+  position: fixed;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+}
+.room-code,
+input {
+  background-color: transparent;
+}
+.pop-up-body {
+  background-color: #f0f2fa;
+  padding: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+}
+.pop-up input {
+  width: 180px;
+  padding: 10px;
+  margin-bottom: 25px;
+  border: 1px solid rgb(53, 53, 53);
+  border-radius: 2px;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.join_error {
+  background-color: rgb(253, 200, 200);
+  border: 1px solid rgb(250, 150, 150);
+  border-radius: 5px;
+  color: rgb(217, 58, 58);
+  font-size: 18px;
+  padding: 10px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-bottom: 25px;
+}
