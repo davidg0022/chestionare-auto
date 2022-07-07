@@ -25,6 +25,12 @@ html {
   margin-bottom: 30px;
   font-weight: 500;
   font-size: 30px;
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 .text_wrapper {
   background-color: transparent;
@@ -67,6 +73,12 @@ html {
   align-items: center;
 }
 .ans_wrapper {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
   cursor: pointer;
   border-radius: 5px;
   border: 1px solid rgb(199, 201, 215);
